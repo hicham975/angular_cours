@@ -1,0 +1,24 @@
+<h3>{{ headername }}</h3>
+
+<h3>Salary is : {{ salary|currency:'EUR' }}</h3>
+
+
+<button (click)="FonctionOnclick('sammmmmmmmmmm')">click ici</button>
+<br>
+
+<input #txt1 (change)="FonctionOnclick(txt1.value)">
+
+<br>
+<br>
+
+<input [(ngModel)]="headername">
+
+<br>
+<br>
+
+<select name="country" id="country">
+    <option selected="" value=""></option>
+    <option  (change)="FonctionOnclick(c.name)" [ngValue]="c.id" *ngFor="let c of countryList">
+      {{c.name}}
+    </option>
+  </select>
