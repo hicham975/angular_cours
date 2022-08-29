@@ -1,0 +1,13 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ title }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ subtitle }}</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="card-link">Card link</a>
+    <button class="btn btn-info m-2" [disabled]="isDisabled" >CECI EST UN BOUTON</button>
+    <button (click)="OnClickActiver()" class="btn btn-danger m-2">ACTIVER/DESACTIVER</button>
+    <a href="{{ link }}" class="card-link">{{ link }}</a>
+
+    <input #txt (keypress)="AfficheTitle(txt.value)" type=text>
+  </div>
+</div>
